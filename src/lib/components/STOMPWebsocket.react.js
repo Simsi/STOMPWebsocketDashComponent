@@ -26,6 +26,7 @@ const STOMPWebsocket = (props) => {
     stompClient.onConnect = () => {
       console.log('STOMP Connected');
       // Subscribe to initial topic if exists
+      console.log(currentTopicRef.current)
       if (currentTopicRef.current) {
         subscribeToTopic(currentTopicRef.current);
       }
